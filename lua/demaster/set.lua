@@ -1,3 +1,5 @@
+vim.g.mapleader = " " --Leader Key Space Bar
+
 vim.opt.guicursor = ""
 vim.opt.relativenumber = true
 vim.opt.hlsearch = false

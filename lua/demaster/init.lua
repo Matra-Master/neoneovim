@@ -1,3 +1,4 @@
 require("demaster.set")
-printf("Hello Demaster")
-vim.g.mapleader = " "
+require("demaster.remap")
+require("packer")
+print("Hello Demaster")

@@ -4,14 +4,12 @@
 local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
-  print("Install path was empty")
   packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
 -- Only required if you have packer configured as `opt`
   vim.cmd [[packadd packer.nvim]]
 end
 
 return require('packer').startup(function(use)
-  print("Packer working baby!!")
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
   use 'folke/tokyonight.nvim'

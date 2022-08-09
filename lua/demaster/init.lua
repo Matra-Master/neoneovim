@@ -1,4 +1,4 @@
 require("demaster.packer-plugins")
-require("demaster.set")
+require("demaster.sets")
 require("demaster.remaps")
 print("Hello Demaster")

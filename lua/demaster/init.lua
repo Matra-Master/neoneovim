@@ -1,4 +1,5 @@
 require("demaster.packer-plugins")
 require("demaster.sets")
 require("demaster.remaps")
+require("demaster.neogit")
 print("Hello Demaster")

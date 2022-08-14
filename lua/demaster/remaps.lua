@@ -34,7 +34,8 @@ nnoremap ("<M-k>", ":m .--<CR>")
 --Greates remap ever
 --Delete to void what you have selected and paste your previous yanked stuff
 vnoremap ("<leader>p", '"_dP') 
-nnoremap ("Y" , "yg$")
+--Set by default in NVIM now :O
+--nnoremap ("Y" , "yg$")
 
 --Closing brackets and other bullsh*t
 
@@ -59,24 +60,13 @@ nnoremap ("<leader>so", ":so<CR>")
 --The next ones are from my old remap file
 --There's no telling if i'll use the same
 --extensions down the road
---
---     Fugitive
---
---nnoremap <leader>gs :G<CR>
---nnoremap <leader>gc :GBranches<CR>
-
---nnoremap <leader>gf :diffget //1<CR>
---nnoremap <leader>gj :diffget //2<CR>
 
 --
---     fzf vim
+--     Fugitive - REPLACED WITH NEOGIT
 --
---nnoremap <silent> <leader>f :Files<cr>
---nnoremap <silent> <leader>ri :Rg<cr>
-
---Homerow for important folders
---nnoremap <silent> <leader>rj :Files ~/.config/<cr>
---nnoremap <silent> <leader>rn :Files ~/.config/nvim<cr>
+--
+--     fzf vim - REPLACED WITH TELESCOPE
+--
 
 --
 --     Harpoon
@@ -112,5 +102,8 @@ nnoremap ("<leader>so", ":so<CR>")
 --
 --     Telescope
 --
-----nnoremap <silent> <leader>ri :Telescope live_grep<cr>
---nnoremap <silent> <leader>t :Telescope <cr>
+nnoremap ("<leader>f", ":Telescope find_files<CR>")
+nnoremap ("<leader>ri", ":Telescope live_grep<CR>")
+nnoremap ("<leader>t", ":Telescope <CR>")
+nnoremap ("<leader>bl", ":Telescope buffers<cr>")
+

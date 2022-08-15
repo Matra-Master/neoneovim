@@ -18,6 +18,7 @@ return require('packer').startup(function(use)
   use("nvim-lua/plenary.nvim")
   use("nvim-lua/popup.nvim")
   use("nvim-telescope/telescope.nvim")
+  use("tpope/vim-fugitive")
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

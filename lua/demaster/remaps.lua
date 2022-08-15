@@ -62,8 +62,14 @@ nnoremap ("<leader>so", ":so<CR>")
 --extensions down the road
 
 --
---     Fugitive - REPLACED WITH NEOGIT
+--     Fugitive - NEOGIT TRIED TO REPLACE THE METAL
 --
+nnoremap ('<leader>gs', ':G<CR>')
+nnoremap ('<leader>gc', ':GBranches<CR>')
+
+nnoremap ('<leader>gf', ':diffget //1<CR>')
+nnoremap ('<leader>gj', ':diffget //2<CR>')
+
 --
 --     fzf vim - REPLACED WITH TELESCOPE
 --

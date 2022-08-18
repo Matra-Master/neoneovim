@@ -78,19 +78,17 @@ nnoremap ('<leader>gj', ':diffget //2<CR>')
 --     Harpoon
 -- I may have to touch this commands a little
 --
---nnoremap <leader>m :lua require("harpoon.mark").add_file()<CR>
---nnoremap <leader>jj :lua require("harpoon.ui").toggle_quick_menu()<CR>
---nnoremap <leader>tc :lua require("harpoon.cmd-ui").toggle_quick_menu()<CR>
-
---nnoremap <leader>jf :lua require("harpoon.ui").nav_file(1)<CR>
---nnoremap <leader>jd :lua require("harpoon.ui").nav_file(2)<CR>
---nnoremap <leader>js :lua require("harpoon.ui").nav_file(3)<CR>
---nnoremap <leader>ja :lua require("harpoon.ui").nav_file(4)<CR>
-
---nnoremap <leader>jk :lua require("harpoon.tmux").gotoTerminal(1)<CR>
---nnoremap <leader>jl :lua require("harpoon.tmux").gotoTerminal(2)<CR>
---nnoremap <leader>ji :lua require("harpoon.tmux").sendCommand(1, 1)<CR>
---nnoremap <leader>jo :lua require("harpoon.tmux").sendCommand(1, 2)<CR>
+nnoremap ('<leader>m ', ':lua require("harpoon.mark").add_file()<CR>')
+nnoremap ('<leader>jj', ':lua require("harpoon.ui").toggle_quick_menu()<CR>')
+nnoremap ('<leader>jc', ':lua require("harpoon.cmd-ui").toggle_quick_menu()<CR>')
+nnoremap ('<leader>jf', ':lua require("harpoon.ui").nav_file(1)<CR>')
+nnoremap ('<leader>jd', ':lua require("harpoon.ui").nav_file(2)<CR>')
+nnoremap ('<leader>js', ':lua require("harpoon.ui").nav_file(3)<CR>')
+nnoremap ('<leader>ja', ':lua require("harpoon.ui").nav_file(4)<CR>')
+nnoremap ('<leader>jk', ':lua require("harpoon.term").gotoTerminal(1)<CR>')
+nnoremap ('<leader>jl', ':lua require("harpoon.term").gotoTerminal(2)<CR>')
+nnoremap ('<leader>ji', ':lua require("harpoon.term").sendCommand(1, 1)<CR>')
+nnoremap ('<leader>jo', ':lua require("harpoon.term").sendCommand(1, 2)<CR>')
 
 --
 --     Notational fzf

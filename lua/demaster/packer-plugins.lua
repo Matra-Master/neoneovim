@@ -28,16 +28,9 @@ return require('packer').startup(function(use)
   -- from https://alpha2phi.medium.com/neovim-for-beginners-lsp-part-1-b3a17ddbe611
   -- Using Mason.nvim instead of lsp-installer
   use {
-    "neovim/nvim-lspconfig",
-    opt = true,
-    event = "BufReadPre",
-    wants = { "mason.nvim" },
-    config = function()
-      require("config.lsp").setup()
-    end,
-    requires = {
-      "williamboman/mason.nvim",
-    },
+    'williamboman/mason.nvim',
+    'williamboman/mason-lspconfig.nvim',
+    'neovim/nvim-lspconfig',
   }
 
   -- Automatically set up your configuration after cloning packer.nvim

@@ -78,7 +78,7 @@ nnoremap ('<leader>gj', ':diffget //2<CR>')
 --     Harpoon
 -- I may have to touch this commands a little
 --
-nnoremap ('<leader>m ', ':lua require("harpoon.mark").add_file()<CR>')
+nnoremap ('<leader>m', ':lua require("harpoon.mark").add_file()<CR>')
 nnoremap ('<leader>jj', ':lua require("harpoon.ui").toggle_quick_menu()<CR>')
 nnoremap ('<leader>jc', ':lua require("harpoon.cmd-ui").toggle_quick_menu()<CR>')
 nnoremap ('<leader>jf', ':lua require("harpoon.ui").nav_file(1)<CR>')

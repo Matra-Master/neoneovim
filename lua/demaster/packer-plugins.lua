@@ -24,6 +24,22 @@ return require('packer').startup(function(use)
   use { 'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
+  -- LSP
+  -- from https://alpha2phi.medium.com/neovim-for-beginners-lsp-part-1-b3a17ddbe611
+  -- Using Mason.nvim instead of lsp-installer
+  use {
+    "neovim/nvim-lspconfig",
+    opt = true,
+    event = "BufReadPre",
+    wants = { "mason.nvim" },
+    config = function()
+      require("config.lsp").setup()
+    end,
+    requires = {
+      "williamboman/mason.nvim",
+    },
+  }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then

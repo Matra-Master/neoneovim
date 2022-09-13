@@ -1,6 +1,9 @@
 local nnoremap = require("demaster.keymap").nnoremap
 local inoremap = require("demaster.keymap").inoremap
 local vnoremap = require("demaster.keymap").vnoremap
+local tnoremap = require("demaster.keymap").tnoremap
+
+tnoremap("<C-w>n", "<C-\\><C-n>")
 
 nnoremap("<leader>e", "<cmd>Ex<CR>")
 nnoremap("<leader>a", ":wincmd h<CR>")

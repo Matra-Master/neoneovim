@@ -13,6 +13,9 @@ nnoremap("<leader>d", ":wincmd l<CR>")
 nnoremap("<C-j>", ":cnext<CR>")
 nnoremap("<C-k>", ":cprevious<CR>")
 
+nnoremap("<C-u>", "<C-u>zz")
+nnoremap("<C-d>", "<C-d>zz")
+
 --Resize splits
 nnoremap("<leader>=", ":vertical resize +5<CR>")
 nnoremap("<leader>-", ":vertical resize -5<CR>")
@@ -31,12 +34,12 @@ vnoremap(">", ">gv")
 inoremap(";;", "<Esc>A;<Esc>")
 inoremap(",,", "<Esc>A,<Esc>")
 
-nnoremap ("<M-j>", ":m .+<CR>") 
-nnoremap ("<M-k>", ":m .--<CR>") 
+nnoremap ("<M-j>", ":m .+<CR>")
+nnoremap ("<M-k>", ":m .--<CR>")
 
 --Greates remap ever
 --Delete to void what you have selected and paste your previous yanked stuff
-vnoremap ("<leader>p", '"_dP') 
+vnoremap ("<leader>p", '"_dP')
 --Set by default in NVIM now :O
 --nnoremap ("Y" , "yg$")
 

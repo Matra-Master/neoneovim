@@ -1,6 +1,7 @@
 require("demaster.packer-plugins")
 require("demaster.sets")
 require("demaster.remaps")
+local nvim_lsp = require("lspconfig")
 print("Hello Demaster")
 
 --Made it work TDD style
@@ -14,10 +15,15 @@ local on_attach = function(client, bufnr)
   -- Mappings.
   local opts = { noremap=true, silent=true }
   buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+  buf_set_keymap('n', '<leader>vk', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+  buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+  buf_set_keymap('n', '<leader>gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
   buf_set_keymap('n', '<leader>bf', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+  buf_set_keymap('n', '<leader>vp', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
+  buf_set_keymap('n', '<leader>vn', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
 end
 
-require"lspconfig".pyright.setup{
+nvim_lsp.pyright.setup{
   on_attach = on_attach,
   flags = {
     debounce_text_changes = 150,

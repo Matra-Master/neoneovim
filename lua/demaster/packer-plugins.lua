@@ -25,6 +25,7 @@ return require('packer').startup(function(use)
   use { 'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
+  use 'nvim-treesitter/nvim-treesitter-context',
 
   use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
 

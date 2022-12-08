@@ -5,7 +5,8 @@ local tnoremap = require("demaster.keymap").tnoremap
 
 tnoremap("<C-w>n", "<C-\\><C-n>")
 
-nnoremap("<leader>e", "<cmd>Ex<CR>")
+nnoremap("<leader>e", ":Lexplore<CR>")
+nnoremap("<leader>E", ":Lexplore %:p:h<CR>")
 nnoremap("<leader>a", ":wincmd h<CR>")
 nnoremap("<leader>ss", ":wincmd j<CR>")
 nnoremap("<leader>ww", ":wincmd k<CR>")

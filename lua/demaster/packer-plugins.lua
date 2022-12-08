@@ -11,11 +11,13 @@ end
 
 return require('packer').startup(function(use)
   -- Essentials and utils
-  use'nvim-lua/plenary.nvim'
-  use'nvim-lua/popup.nvim'
-  use'nvim-telescope/telescope.nvim'
-  use'tpope/vim-fugitive'
-  use'ThePrimeagen/harpoon'
+  use 'nvim-lua/plenary.nvim'
+  use 'nvim-lua/popup.nvim'
+  use 'nvim-telescope/telescope.nvim'
+  use 'tpope/vim-fugitive'
+  use 'ThePrimeagen/harpoon'
+
+  use 'nvim-lualine/lualine.nvim'
 
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'

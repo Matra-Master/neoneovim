@@ -10,11 +10,6 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 return require('packer').startup(function(use)
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
-  use 'folke/tokyonight.nvim'
-  use 'ellisonleao/gruvbox.nvim'
-
   -- Essentials and utils
   use'nvim-lua/plenary.nvim'
   use'nvim-lua/popup.nvim'
@@ -22,10 +17,15 @@ return require('packer').startup(function(use)
   use'tpope/vim-fugitive'
   use'ThePrimeagen/harpoon'
 
+  -- Packer can manage itself
+  use 'wbthomason/packer.nvim'
+  use 'folke/tokyonight.nvim'
+  use 'ellisonleao/gruvbox.nvim'
+
   use { 'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
-  use 'nvim-treesitter/nvim-treesitter-context',
+  use 'nvim-treesitter/nvim-treesitter-context'
 
   use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
 

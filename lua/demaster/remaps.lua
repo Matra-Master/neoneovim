@@ -38,11 +38,24 @@ inoremap(",,", "<Esc>A,<Esc>")
 nnoremap ("<M-j>", ":m .+<CR>")
 nnoremap ("<M-k>", ":m .--<CR>")
 
+--
+-- Yank remaps
+--
 --Greates remap ever
 --Delete to void what you have selected and paste your previous yanked stuff
 vnoremap ("<leader>p", '"_dP')
---Set by default in NVIM now :O
---nnoremap ("Y" , "yg$")
+-- Copy to clipboard
+vnoremap("<leader>y", '"+y')
+nnoremap("<leader>Y", '"+yg_')
+nnoremap("<leader>y", '"+y')
+
+-- Paste from clipboard
+nnoremap ("<leader>p", '"+p')
+nnoremap ("<leader>P", '"+P')
+-- vnoremap ("<leader>p", '"+p') -- repeated command conflicts with the greatest remap ever
+vnoremap ("<leader>P", '"+P')
+
+
 
 --Closing brackets and other bullsh*t
 

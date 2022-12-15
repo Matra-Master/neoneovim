@@ -1,3 +1,4 @@
+local nvim_lsp = require("lspconfig")
 --Made it work TDD style
 --just made it work, for python server and without any new separated shinny config file
 --Now i should do the refactor style shit
@@ -12,7 +13,7 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '<leader>vk', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
   buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
   buf_set_keymap('n', '<leader>gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
-  buf_set_keymap('n', '<leader>bf', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+  buf_set_keymap('n', '<leader>bf', '<cmd>lua vim.lsp.buf.format({async=true})<CR>', opts)
   buf_set_keymap('n', '<leader>vp', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
   buf_set_keymap('n', '<leader>vn', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
 end

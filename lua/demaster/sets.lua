@@ -1,6 +1,5 @@
 local opt = vim.opt
 
-opt.guicursor = ""
 opt.relativenumber = true
 opt.hlsearch = false
 opt.incsearch = true
@@ -32,4 +31,5 @@ opt.splitright = true
 opt.list = true
 opt.listchars = "tab:▸ ,trail:·"
 opt.confirm = true
-opt.emoji   = true
+opt.emoji = true
+opt.laststatus= 3

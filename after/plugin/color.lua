@@ -1,18 +1,27 @@
---
---
+function ColorTheme(color)
+  color = color or "gruvbox"
+  vim.cmd.colorscheme(color)
+  --vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+  --vim.api.nvim_set_hl(0, "NonText", { bg="none" })
+  --vim.api.nvim_set_hl(0, "EndOfBuffer", { bg="none" })
+  vim.api.nvim_set_hl(0, "signcolumn", { bg="none" })
+  vim.api.nvim_set_hl(0, "WinSeparator", { bg="none" })
+  vim.api.nvim_set_hl(0, "HarpoonWindow", { bg="none" })
+end
+
 -- TOKYONIGHT
 --
--- vim.g.tokyonight_transparent_sidebar = true
--- vim.g.tokyonight_transparent = true
--- vim.opt.background = "dark"
--- 
--- vim.cmd("colorscheme tokyonight")
-
+require("tokyonight").setup({
+  style = "moon",
+  transparent = true,
+  terminal_colors = true,
+})
 
 --
 -- GRUVBOX
 --
 require("gruvbox").setup({
+  transparent_mode = true,
   undercurl = true,
   underline = true,
   bold = true,
@@ -27,9 +36,5 @@ require("gruvbox").setup({
       SignColumn = {bg = "#00ffff"}
   }
 })
-vim.cmd("colorscheme gruvbox")
-vim.cmd("highlight Normal guibg=NONE ctermbg=NONE")
-vim.cmd("highlight NonText guibg=NONE ctermbg=NONE")
-vim.cmd("highlight EndOfBuffer guibg=NONE ctermbg=NONE")
-vim.cmd("highlight signcolumn guibg=NONE ctermbg=NONE")
-vim.cmd("highlight WinSeparator guibg=NONE ctermbg=NONE")
+
+ColorTheme()

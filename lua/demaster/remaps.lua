@@ -14,8 +14,8 @@ nnoremap("<leader>d", ":wincmd l<CR>")
 nnoremap("<C-j>", ":cnext<CR>")
 nnoremap("<C-k>", ":cprevious<CR>")
 
-nnoremap("<C-u>", "<C-u>zz")
-nnoremap("<C-d>", "<C-d>zz")
+--nnoremap("<C-u>", "<C-u>zz")
+--nnoremap("<C-d>", "<C-d>zz")
 
 --Resize splits
 nnoremap("<leader>=", ":vertical resize +5<CR>")

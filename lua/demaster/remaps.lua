@@ -129,6 +129,7 @@ nnoremap ('<leader>jo', ':lua require("harpoon.term").sendCommand(1, 2)<CR>')
 nnoremap ("<leader>f", ":Telescope find_files<CR>")
 nnoremap ("<leader>ri", ":Telescope live_grep theme=get_dropdown<CR>")
 nnoremap ("<leader>t", ":Telescope <CR>")
+nnoremap ("<leader>tg", ":Telescope git_files<CR>")
 nnoremap ("<leader>jJ", ":Telescope harpoon marks<CR>")
 nnoremap ("<leader>bl", ":Telescope buffers<cr>")
 

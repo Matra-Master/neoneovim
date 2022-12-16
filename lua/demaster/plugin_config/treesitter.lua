@@ -4,6 +4,7 @@ require'nvim-treesitter.configs'.setup {
   },
   highlight = {
     ensure_installed = {
+      "help",
       "php",
       "lua",
       "rust",

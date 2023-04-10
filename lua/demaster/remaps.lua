@@ -5,24 +5,24 @@ local tnoremap = require("demaster.keymap").tnoremap
 
 tnoremap("<C-w>n", "<C-\\><C-n>", {desc = 'Exit Terminal'})
 
-nnoremap("<leader>e", ":Lexplore<CR>", {desc = 'File tree'})
-nnoremap("<leader>E", ":Lexplore %:p:h<CR>", {desc = 'File tree'})
+nnoremap("<leader>e", ":Lexplore<CR>", {desc = "Open file [E]xplorer in neovim's actual "})
+nnoremap("<leader>E", ":Lexplore %:p:h<CR>", {desc = "Open file [e]xplorer in current's file folder"})
 nnoremap("<leader>a", ":wincmd h<CR>", {desc = 'Move to left window'})
 nnoremap("<leader>s", ":wincmd j<CR>", {desc = 'Move to window down'})
 nnoremap("<leader>w", ":wincmd k<CR>", {desc = 'Move to window up'})
 nnoremap("<leader>d", ":wincmd l<CR>", {desc = 'Move to right window'})
-nnoremap("<C-j>", ":cnext<CR>", {desc = ''})
-nnoremap("<C-k>", ":cprevious<CR>", {desc = ''})
+nnoremap("<C-j>", ":cnext<CR>", {desc = 'Go to next error in the C error List'})
+nnoremap("<C-k>", ":cprevious<CR>", {desc = 'Go to previous error in the C error List'})
 
 --nnoremap("<C-u>", "<C-u>zz", {desc = ''})
 --nnoremap("<C-d>", "<C-d>zz", {desc = ''})
 
 --Resize splits
-nnoremap("<leader>=", ":vertical resize +5<CR>", {desc = ''})
-nnoremap("<leader>-", ":vertical resize -5<CR>", {desc = ''})
+nnoremap("<leader>=", ":vertical resize +5<CR>", {desc = 'Resize vertical buffer +5'})
+nnoremap("<leader>-", ":vertical resize -5<CR>", {desc = 'Resize vertical buffer -5'})
 
 --Buffers List
-nnoremap("<Leader>bp", ":b# <CR>", {desc = ''})
+nnoremap("<Leader>bp", ":b# <CR>", {desc = '[B]uffers: Go to [P]revious file'})
 
 --Simple Split swapping
 --nnoremap("<Leader>sp", "<C-W>x", {desc = ''})
@@ -32,8 +32,8 @@ vnoremap("<", "<gv", {desc = ''})
 vnoremap(">", ">gv", {desc = ''})
 
 -- Easy insertion of trailing ; or , from instert mode
-inoremap(";;", "<Esc>A;<Esc>", {desc = ''})
-inoremap(",,", "<Esc>A,<Esc>", {desc = ''})
+inoremap(";;", "<Esc>A;<Esc>", {desc = 'Insert a ; at the end of a line'})
+inoremap(",,", "<Esc>A,<Esc>", {desc = 'Insert a , at the end of a line'})
 
 nnoremap ("<M-j>", ":m .+<CR>", {desc = ''})
 nnoremap ("<M-k>", ":m .--<CR>", {desc = ''})
@@ -45,7 +45,7 @@ nnoremap ("<M-k>", ":m .--<CR>", {desc = ''})
 --Delete to void what you have selected and paste your previous yanked stuff
 vnoremap ("<leader>p", '"_dP', {desc = ''})
 -- Copy to clipboard
-vnoremap("<leader>y", '"+y', {desc = ''})
+vnoremap("<leader>y", '"+y', {desc = 'Yank to clipboard in visual mode'})
 nnoremap("<leader>Y", '"+yg_', {desc = ''})
 nnoremap("<leader>y", '"+y', {desc = ''})
 
@@ -96,17 +96,17 @@ nnoremap ('<leader>gj', ':diffget //2<CR>', {desc = ''})
 --     Harpoon
 -- I may have to touch this commands a little
 --
-nnoremap ('<leader>m', ':lua require("harpoon.mark").add_file()<CR>', { desc = '' })
-nnoremap ('<leader>jj', ':lua require("harpoon.ui").toggle_quick_menu()<CR>', {desc = ''})
-nnoremap ('<leader>jc', ':lua require("harpoon.cmd-ui").toggle_quick_menu()<CR>', {desc = ''})
-nnoremap ('<leader>jf', ':lua require("harpoon.ui").nav_file(1)<CR>', {desc = ''})
-nnoremap ('<leader>jd', ':lua require("harpoon.ui").nav_file(2)<CR>', {desc = ''})
-nnoremap ('<leader>js', ':lua require("harpoon.ui").nav_file(3)<CR>', {desc = ''})
-nnoremap ('<leader>ja', ':lua require("harpoon.ui").nav_file(4)<CR>', {desc = ''})
-nnoremap ('<leader>jk', ':lua require("harpoon.term").gotoTerminal(1)<CR>', {desc = ''})
-nnoremap ('<leader>jl', ':lua require("harpoon.term").gotoTerminal(2)<CR>', {desc = ''})
-nnoremap ('<leader>ji', ':lua require("harpoon.term").sendCommand(1, 1)<CR>', {desc = ''})
-nnoremap ('<leader>jo', ':lua require("harpoon.term").sendCommand(1, 2)<CR>', {desc = ''})
+nnoremap ('<leader>m', ':lua require("harpoon.mark").add_file()<CR>', { desc = "Harpoon: [M]ark a file and add it to the list"})
+nnoremap ('<leader>jj', ':lua require("harpoon.ui").toggle_quick_menu()<CR>', {desc = 'Harpoon: Open UI'})
+nnoremap ('<leader>jc', ':lua require("harpoon.cmd-ui").toggle_quick_menu()<CR>', {desc = 'Harpoon: terminal commands'})
+nnoremap ('<leader>jf', ':lua require("harpoon.ui").nav_file(1)<CR>', {desc = 'Harpoon: Open file 1'})
+nnoremap ('<leader>jd', ':lua require("harpoon.ui").nav_file(2)<CR>', {desc = 'Harpoon: Open file 2'})
+nnoremap ('<leader>js', ':lua require("harpoon.ui").nav_file(3)<CR>', {desc = 'Harpoon: Open file 3'})
+nnoremap ('<leader>ja', ':lua require("harpoon.ui").nav_file(4)<CR>', {desc = 'Harpoon: Open file 4'})
+nnoremap ('<leader>jk', ':lua require("harpoon.term").gotoTerminal(1)<CR>', {desc = 'Harpoon: Open a new terminal or go to an existing one'})
+nnoremap ('<leader>jl', ':lua require("harpoon.term").gotoTerminal(2)<CR>', {desc = 'Harpoon: Open a new terminal or go to an existing one'})
+nnoremap ('<leader>ji', ':lua require("harpoon.term").sendCommand(1, 1)<CR>', {desc = 'Harpoon: Send first command in the list to the first terminal'})
+nnoremap ('<leader>jo', ':lua require("harpoon.term").sendCommand(1, 2)<CR>', {desc = 'Harpoon: Send first command in the list to the second terminal'})
 
 --
 --     Notational fzf

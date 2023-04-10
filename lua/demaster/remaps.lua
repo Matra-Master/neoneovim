@@ -132,6 +132,6 @@ nnoremap ("<leader>t", ":Telescope <CR>", { desc = '[T]elescope Built-ins'})
 nnoremap ("<leader>tg", ":Telescope git_files<CR>", { desc = '[T]elescope [G]it builtin'})
 nnoremap ("<leader>jJ", ":Telescope harpoon marks<CR>", { desc = 'Telescope with Harpoon!'})
 nnoremap ("<leader>bl", ":Telescope buffers<CR>", { desc = "[B]uffers [L]ist"})
-nnoremap ("<leader>ds", ":Telescope lsp_document_symbols<CR>", { desc = "LSP: [D]ocument [S]ymbols"})
+nnoremap ("<leader>tds", ":Telescope lsp_document_symbols<CR>", { desc = "LSP: [D]ocument [S]ymbols"})
 nnoremap ("<leader>tkm", ":Telescope keymaps<CR>", { desc = "LSP: [K]ey[M]aps list with descriptions"})
 

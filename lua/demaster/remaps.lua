@@ -26,6 +26,8 @@ nnoremap("<Leader>bp", ":b# <CR>", {desc = '[B]uffers: Go to [P]revious file'})
 
 --Simple Split swapping
 --nnoremap("<Leader>sp", "<C-W>x", {desc = ''})
+--jq json formating
+vnoremap("<Leader>vjq", ":.!jq<CR>", {desc = 'Visual format of Json text'})
 
 -- Reselect visual selection after indenting
 vnoremap("<", "<gv", {desc = ''})

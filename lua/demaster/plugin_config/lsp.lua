@@ -5,7 +5,7 @@ lsp.ensure_installed({
   --'intelephense', --php
   'tsserver',
   'eslint',
-  'sumneko_lua',
+  'lua_ls',
   'rust_analyzer',
   'intelephense', --php
 })

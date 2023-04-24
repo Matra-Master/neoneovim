@@ -25,7 +25,6 @@ opt.smartcase = true
 opt.showtabline = 1
 opt.mouse = "a"
 opt.cursorline = false
-opt.undodir = "~/.config/nvim/undodir"
 opt.splitbelow = true
 opt.splitright = true
 opt.list = true
@@ -33,3 +32,7 @@ opt.listchars = "tab:▸ ,trail:·"
 opt.confirm = true
 opt.emoji = true
 opt.laststatus= 3
+-- UNLIMITED UNDOOOOS
+--opt.undodir = "/home/fran/.config/nvim/undodir"
+--opt.undofile = true
+

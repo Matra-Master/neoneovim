@@ -1,3 +1,6 @@
+--UNUSED IN PLUGIN_CONFIG
+--WE'RE USING LSP-ZERO NOW
+
 local nvim_lsp = require("lspconfig")
 --Made it work TDD style
 --just made it work, for python server and without any new separated shinny config file
@@ -31,6 +34,16 @@ nvim_lsp.tsserver.setup{
     debounce_text_changes = 150,
   }
 }
+nvim_lsp.intelephense.setup{
+  on_attach = on_attach,
+  diagnostics = {
+    enable = true,
+  },
+  files = {
+    maxSize = 5000000;
+  };
+}
+
 --nvim_lsp.denols.setup{
 --  root_dir = nvim_lsp.util.root_pattern("deno.json"),
 --  on_attach = on_attach,

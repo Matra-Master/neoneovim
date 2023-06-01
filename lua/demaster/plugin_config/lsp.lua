@@ -9,6 +9,10 @@ lsp.ensure_installed({
   'intelephense', --php
 })
 
+-- don't initialize this language server
+-- we will use rust-tools to setup rust_analyzer
+lsp.skip_server_setup({'rust_analyzer'})
+
 -- Completion remaps. They're from the Primeagen so I'm commenting them for now
 --local cmp = require('cmp')
 --local cmp_select = { behavior = cmp.SelectBehavior.Select }
@@ -39,3 +43,12 @@ lsp.on_attach(function(_, bufnr)
 end)
 
 lsp.setup()
+
+
+-- initialize rust_analyzer with rust-tools
+-- see :help lsp-zero.build_options()
+local rust_lsp = lsp.build_options('rust_analyzer', {
+  single_file_support = false
+})
+
+--require('rust-tools').setup({server = rust_lsp})

@@ -30,6 +30,9 @@ return require('packer').startup(function(use)
   }
   use 'nvim-treesitter/nvim-treesitter-context'
 
+  --Leap is a the rework of Lightspeed
+  use 'ggandor/leap.nvim'
+
   use {
     'VonHeikemen/lsp-zero.nvim',
     requires = {

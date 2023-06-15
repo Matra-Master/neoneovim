@@ -41,8 +41,9 @@ nnoremap ("<M-j>", ":m .+<CR>", {desc = ''})
 nnoremap ("<M-k>", ":m .--<CR>", {desc = ''})
 
 
--- Counts the number of ocurrences of the last searched pattern in the line
+
 nnoremap ("<Leader>cl", ":s///gn<CR>", {desc = '[C]ount ocurrences of last searched pattern in [L]ine'})
+nnoremap ("<Leader>tw", ":%s/\\s\\+$//e", {desc = 'Remove [T]railing [W]hitespaces in file'})
 
 --
 -- Yank remaps

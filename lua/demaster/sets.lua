@@ -36,3 +36,13 @@ opt.laststatus= 3
 --opt.undodir = "/home/fran/.config/nvim/undodir"
 --opt.undofile = true
 
+vim.api.nvim_create_autocmd({"InsertEnter"}, {
+  callback = function()
+    opt.relativenumber = false
+  end
+})
+vim.api.nvim_create_autocmd({"InsertLeave"}, {
+  callback = function()
+    opt.relativenumber = true
+  end
+})

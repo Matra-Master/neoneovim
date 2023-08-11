@@ -1,6 +1,5 @@
-local lsp = require('lsp-zero')
-
-lsp.preset('recommended')
+local lsp = require('lsp-zero').preset('minimal')
+--Missing go to definiton and go to reference keymaps
 lsp.ensure_installed({
   'tsserver',
   'eslint',
@@ -8,21 +7,9 @@ lsp.ensure_installed({
   'rust_analyzer',
   'intelephense', --php
 })
-
 -- don't initialize this language server
 -- we will use rust-tools to setup rust_analyzer
 lsp.skip_server_setup({'rust_analyzer'})
-
--- Completion remaps. They're from the Primeagen so I'm commenting them for now
---local cmp = require('cmp')
---local cmp_select = { behavior = cmp.SelectBehavior.Select }
---local cmp_mappings = ({
---  ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
---  ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
---  --['<C-y>'] = cmp.mapping.confirm({ select = true }),
---  ['<C-Space>'] = cmp.mapping.complete(),
---})
--- lsp.setup_nvim_cmp({ mapping = cmp_mappings })
 
 lsp.on_attach(function(_, bufnr)
   local opts = { buffer = bufnr, remap = false}
@@ -39,10 +26,58 @@ lsp.on_attach(function(_, bufnr)
   vim.keymap.set('n', '<leader>vrn', function() vim.lsp.buf.rename() end, opts)             --From Prime
   vim.keymap.set('i', '<C-h>',       function() vim.lsp.buf.signature_help() end, opts)     --From Prime
   vim.keymap.set('n', '<leader>bf',  function() vim.lsp.buf.format({async=true}) end, opts)
-
 end)
-
 lsp.setup()
+
+-- Completion remaps. They're from the Primeagen so I'm commenting them for now
+local cmp = require('cmp')
+local cmp_select = { behavior = cmp.SelectBehavior.Select }
+local cmp_mappings = ({
+  ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
+  ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
+  ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+  ['<C-Space>'] = cmp.mapping.complete(),
+  ['<CR>'] = cmp.mapping.confirm({
+      -- documentation says this is important.
+      -- I don't know why.
+      behavior = cmp.ConfirmBehavior.Replace,
+      select = false,
+  })
+})
+cmp.setup({
+  preselect = 'item',
+  mapping = cmp_mappings,
+  window = {
+    --completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
+  },
+  completion = {
+    completeopt = 'menu,menuone,noinsert'
+  },
+  sources = {
+    {name = 'nvim_lsp'},
+    {name = 'nvim_lua'},
+    {name = 'luasnip'},
+    {name = 'path'},
+    {name = 'buffer'},
+  },
+  formatting = {
+    fields = { 'menu', 'abbr', 'kind' },
+    -- here is where the change happens
+    format = function(entry, item)
+      local menu_icon = {
+        nvim_lsp = 'λ',
+        luasnip = '⋗',
+        buffer = 'Ω',
+        path = '🖫',
+        nvim_lua = 'Π',
+      }
+
+      item.menu = menu_icon[entry.source.name]
+      return item
+    end,
+  }
+})
 
 
 -- initialize rust_analyzer with rust-tools

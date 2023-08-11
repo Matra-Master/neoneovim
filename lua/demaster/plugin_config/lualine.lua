@@ -1,3 +1,4 @@
+
 require'lualine'.setup {
   options = {
     icons_enabled = true,
@@ -14,7 +15,7 @@ require'lualine'.setup {
                   {'diagnostics', sources={'nvim_diagnostic', 'coc'}}},
     lualine_c = {'filename'},
     lualine_x = {'fileformat', 'filetype'},
-    lualine_y = {'progress'},
+    lualine_y = {},
     lualine_z = {'location'}
   },
   inactive_sections = {

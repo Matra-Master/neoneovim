@@ -34,26 +34,7 @@ return require('packer').startup(function(use)
   --Leap is the rework of Lightspeed
   use 'ggandor/leap.nvim'
 
-  --use 'Exafunction/codeium.vim'
-  --use {
-  --  'Exafunction/codeium.vim',
-  --  config = function()
-  --    -- Tab wont work because it conflicts with lsp
-  --    vim.keymap.set('i', "<Tab>", function() return vim.fn['codeium#Accept']() end, {expr = true})
-  --  end
-  --}
-  --
-  use {
-      "jcdickinson/codeium.nvim",
-      requires = {
-          "nvim-lua/plenary.nvim",
-          "hrsh7th/nvim-cmp",
-      },
-      config = function()
-          require("codeium").setup({
-          })
-      end
-  }
+  use 'Exafunction/codeium.vim'
 
   use {
     'VonHeikemen/lsp-zero.nvim',

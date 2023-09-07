@@ -57,7 +57,14 @@ return require('packer').startup(function(use)
       {'rafamadriz/friendly-snippets'},
     }
   }
+--  use{'adalessa/laravel.nvim',
+--    requires = {
+--      {'nvim-lua/plenary.nvim'},
+--      {'nvim-telescope/telescope.nvim'},
+--    }
+--  }
 
+  use 'tpope/vim-dadbod'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

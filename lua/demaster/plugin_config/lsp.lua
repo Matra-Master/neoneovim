@@ -6,6 +6,7 @@ lsp.ensure_installed({
   'lua_ls',
   'rust_analyzer',
   'intelephense', --php
+  --'phpactor', --php
 })
 -- don't initialize this language server
 -- we will use rust-tools to setup rust_analyzer
@@ -13,7 +14,6 @@ lsp.skip_server_setup({'rust_analyzer'})
 
 lsp.on_attach(function(_, bufnr)
   local opts = { buffer = bufnr, remap = false}
-
   vim.keymap.set('n', '<leader>gd',  function() vim.lsp.buf.definition() end, opts)
   vim.keymap.set('n', 'K',           function() vim.lsp.buf.hover() end, opts)
   vim.keymap.set('n', 'gi',          function() vim.lsp.buf.implementation() end, opts)
@@ -27,6 +27,11 @@ lsp.on_attach(function(_, bufnr)
   vim.keymap.set('i', '<C-h>',       function() vim.lsp.buf.signature_help() end, opts)     --From Prime
   vim.keymap.set('n', '<leader>bf',  function() vim.lsp.buf.format({async=true}) end, opts)
 end)
+
+--require('rust-tools').setup({server = rust_lsp})
+--require('lspconfig').phpactor.setup({})       --No tengo ganas ahora de config
+
+
 lsp.setup()
 
 -- Completion remaps. They're from the Primeagen so I'm commenting them for now
@@ -86,4 +91,5 @@ local rust_lsp = lsp.build_options('rust_analyzer', {
   single_file_support = false
 })
 
---require('rust-tools').setup({server = rust_lsp})
+
+

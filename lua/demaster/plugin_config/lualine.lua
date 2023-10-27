@@ -1,4 +1,3 @@
-
 require'lualine'.setup {
   options = {
     icons_enabled = true,
@@ -13,9 +12,11 @@ require'lualine'.setup {
     lualine_a = {'mode'},
     lualine_b = {'branch', 'diff',
                   {'diagnostics', sources={'nvim_diagnostic', 'coc'}}},
-    lualine_c = {'filename'},
-    lualine_x = {'fileformat', 'filetype'},
-    lualine_y = {},
+    lualine_c = {
+      {'filename', path = 3 }
+    },
+    lualine_x = {},
+    lualine_y = {'fileformat', 'filetype'},
     lualine_z = {'location'}
   },
   inactive_sections = {
@@ -26,9 +27,6 @@ require'lualine'.setup {
     lualine_y = {},
     lualine_z = {}
   },
-  tabline = {
-    lualine_a = {'tabs'},
-    lualine_b = {'buffers'}
-  },
+  tabline = {},
   extensions = {}
 }

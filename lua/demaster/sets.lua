@@ -22,7 +22,7 @@ opt.signcolumn = 'number'
 opt.updatetime = 100
 opt.ignorecase = true
 opt.smartcase = true
-opt.showtabline = 1
+opt.showtabline = 0
 opt.mouse = "a"
 opt.cursorline = false
 opt.splitbelow = true
@@ -35,6 +35,11 @@ opt.laststatus= 3
 -- UNLIMITED UNDOOOOS
 --opt.undodir = "/home/fran/.config/nvim/undodir"
 --opt.undofile = true
+--
+
+vim.g.netrw_banner = 0
+vim.g.netrw_altv = 1
+vim.g.netrw_liststyle = 4
 
 vim.api.nvim_create_autocmd({"InsertEnter"}, {
   callback = function()

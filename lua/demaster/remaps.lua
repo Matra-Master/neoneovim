@@ -145,3 +145,7 @@ nnoremap ("<leader>bl", ":Telescope buffers<CR>", { desc = "[B]uffers [L]ist"})
 nnoremap ("<leader>tds", ":Telescope lsp_document_symbols<CR>", { desc = "LSP: [D]ocument [S]ymbols"})
 nnoremap ("<leader>tkm", ":Telescope keymaps<CR>", { desc = "LSP: [K]ey[M]aps list with descriptions"})
 
+--
+--     Oil
+--
+nnoremap ("-", ":Oil<CR>", { desc = 'Open Parent Directory in Oil.nvim' })

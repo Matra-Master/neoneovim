@@ -1,16 +1,5 @@
 local lsp = require('lsp-zero').preset('minimal')
 --Missing go to definiton and go to reference keymaps
-lsp.ensure_installed({
-  'tsserver',
-  'eslint',
-  'lua_ls',
-  'rust_analyzer',
-  'intelephense', --php
-  --'phpactor', --php
-})
--- don't initialize this language server
--- we will use rust-tools to setup rust_analyzer
-lsp.skip_server_setup({'rust_analyzer'})
 
 lsp.on_attach(function(_, bufnr)
   local opts = { buffer = bufnr, remap = false}
@@ -27,14 +16,27 @@ lsp.on_attach(function(_, bufnr)
   vim.keymap.set('i', '<C-h>',       function() vim.lsp.buf.signature_help() end, opts)     --From Prime
   vim.keymap.set('n', '<leader>bf',  function() vim.lsp.buf.format({async=true}) end, opts)
 end)
-
 --require('rust-tools').setup({server = rust_lsp})
 --require('lspconfig').phpactor.setup({})       --No tengo ganas ahora de config
-
-
 lsp.setup()
 
--- Completion remaps. They're from the Primeagen so I'm commenting them for now
+require('mason').setup()
+require('mason-lspconfig').setup({
+  ensure_installed = {
+    'tsserver',
+    'eslint',
+    'lua_ls',
+    'rust_analyzer',
+    'intelephense', --php
+    --'phpactor', --php
+  },
+  skip_server_setup = {'rust_analyzer'},
+  handlers = {
+    lsp.default_setup,
+  },
+})
+
+-- Completion remaps
 local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 local cmp_mappings = ({

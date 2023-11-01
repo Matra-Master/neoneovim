@@ -149,3 +149,4 @@ nnoremap ("<leader>tkm", ":Telescope keymaps<CR>", { desc = "LSP: [K]ey[M]aps li
 --     Oil
 --
 nnoremap ("-", ":Oil<CR>", { desc = 'Open Parent Directory in Oil.nvim' })
+nnoremap ("<leader>e", ":Oil<CR>", { desc = 'Open Parent Directory in Oil.nvim' })

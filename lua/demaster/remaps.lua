@@ -148,5 +148,12 @@ nnoremap ("<leader>tkm", ":Telescope keymaps<CR>", { desc = "LSP: [K]ey[M]aps li
 --
 --     Oil
 --
-nnoremap ("-", ":Oil<CR>", { desc = 'Open Parent Directory in Oil.nvim' })
+nnoremap ("-", ":Oil --float<CR>", { desc = 'Open Parent Directory in Oil.nvim' })
 nnoremap ("<leader>e", ":Oil<CR>", { desc = 'Open Parent Directory in Oil.nvim' })
+
+
+--
+--     Simple Splits
+--
+nnoremap ("<leader>zo", ":tab split<CR>", { desc = '[O]pen buffer in a tab'})
+nnoremap ("<leader>zp", ":tab close<CR>", { desc = 'CLose tab'})

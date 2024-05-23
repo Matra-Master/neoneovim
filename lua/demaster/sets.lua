@@ -31,7 +31,9 @@ opt.list = true
 opt.listchars = "tab:▸ ,trail:·"
 opt.confirm = true
 opt.emoji = true
-opt.laststatus= 3
+opt.laststatus = 3
+opt.colorcolumn = "120"
+
 -- UNLIMITED UNDOOOOS
 --opt.undodir = "/home/fran/.config/nvim/undodir"
 --opt.undofile = true

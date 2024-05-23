@@ -16,7 +16,12 @@ return require('packer').startup(function(use)
   use 'nvim-telescope/telescope.nvim'
   use 'junegunn/fzf.vim'
   use 'tpope/vim-fugitive'
-  use 'ThePrimeagen/harpoon'
+  use {
+      "ThePrimeagen/harpoon",
+      branch = "harpoon2",
+      requires = { {"nvim-lua/plenary.nvim"} }
+  }
+
   use '2kabhishek/nerdy.nvim'
 
   use 'nvim-lualine/lualine.nvim'

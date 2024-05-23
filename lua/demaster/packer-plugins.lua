@@ -17,6 +17,7 @@ return require('packer').startup(function(use)
   use 'junegunn/fzf.vim'
   use 'tpope/vim-fugitive'
   use 'ThePrimeagen/harpoon'
+  use '2kabhishek/nerdy.nvim'
 
   use 'nvim-lualine/lualine.nvim'
 

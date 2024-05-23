@@ -2,7 +2,7 @@
 -- ihttps://github.com/ThePrimeagen/.dotfiles/blob/master/vim-2022/.config/nvim/lua/theprimeagen/remap.lua
 local M = {}
 
-function bind(op, outer_opts)
+local function bind(op, outer_opts)
     outer_opts = outer_opts or {noremap = true}
     return function(lhs, rhs, opts)
         opts = vim.tbl_extend("force",

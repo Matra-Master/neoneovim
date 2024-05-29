@@ -21,6 +21,13 @@ return require('packer').startup(function(use)
       branch = "harpoon2",
       requires = { {"nvim-lua/plenary.nvim"} }
   }
+  use {
+      "ThePrimeagen/refactoring.nvim",
+      requires = {
+          {"nvim-lua/plenary.nvim"},
+          {"nvim-treesitter/nvim-treesitter"}
+      }
+  }
 
   use '2kabhishek/nerdy.nvim'
 
@@ -30,8 +37,6 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- Themes
-  use 'folke/tokyonight.nvim'
-  use 'ellisonleao/gruvbox.nvim'
   use { "catppuccin/nvim", as = "catppuccin" }
   use 'nvim-tree/nvim-web-devicons'
 

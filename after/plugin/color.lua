@@ -1,5 +1,5 @@
 function ColorTheme(color)
-  color = color or "gruvbox"
+  color = color or "catppuccin"
   vim.cmd.colorscheme(color)
   --vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
   --vim.api.nvim_set_hl(0, "NonText", { bg="none" })
@@ -11,35 +11,35 @@ end
 
 -- TOKYONIGHT
 --
-require("tokyonight").setup({
-  style = "moon",
-  transparent = true,
-  terminal_colors = true,
-})
-
+--require("tokyonight").setup({
+--  style = "moon",
+--  transparent = true,
+--  terminal_colors = true,
+--})
 --
--- GRUVBOX
---
-require("gruvbox").setup({
-  transparent_mode = true,
-  undercurl = true,
-  underline = true,
-  bold = true,
-  italic = {
-    strings = true,
-    operators = false,
-    comments = true
-  },
-  strikethrough = true,
-  invert_selection = false,
-  invert_signs = false,
-  invert_tabline = false,
-  invert_intend_guides = false,
-  inverse = true, -- invert background for search, diffs, statuslines and errors
-  overrides = {
-      SignColumn = {bg = "#00ffff"}
-  }
-})
+----
+---- GRUVBOX
+----
+--require("gruvbox").setup({
+--  transparent_mode = true,
+--  undercurl = true,
+--  underline = true,
+--  bold = true,
+--  italic = {
+--    strings = true,
+--    operators = false,
+--    comments = true
+--  },
+--  strikethrough = true,
+--  invert_selection = false,
+--  invert_signs = false,
+--  invert_tabline = false,
+--  invert_intend_guides = false,
+--  inverse = true, -- invert background for search, diffs, statuslines and errors
+--  overrides = {
+--      SignColumn = {bg = "#00ffff"}
+--  }
+--})
 require("catppuccin").setup({
     flavour = "frappe", -- latte, frappe, macchiato, mocha
     -- flavour = "auto" -- will respect terminal's background

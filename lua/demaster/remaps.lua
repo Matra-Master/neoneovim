@@ -158,9 +158,8 @@ nnoremap ("<leader><leader>", ":Telescope buffers<CR>", { desc = "[B]uffers [L]i
 --
 --     Oil
 --
-nnoremap ("-", ":Oil --float<CR>", { desc = 'Open Parent Directory in Oil.nvim' })
-nnoremap ("<leader>e", ":Oil<CR>", { desc = 'Open Parent Directory in Oil.nvim' })
-
+nnoremap ("<leader>e", ":Oil --float<CR>", { desc = 'Open Parent Directory in Oil.nvim' })
+nnoremap ("-", ":vs +Oil | wincmd H<CR>", { desc = 'Open Parent Directory in Oil.nvim' })
 
 --
 --     Simple Splits

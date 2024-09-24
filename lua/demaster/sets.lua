@@ -43,12 +43,16 @@ vim.g.netrw_banner = 0
 vim.g.netrw_altv = 1
 vim.g.netrw_liststyle = 4
 
-vim.api.nvim_create_autocmd({"InsertEnter"}, {
+vim.api.nvim_create_autocmd('InsertEnter', {
+  desc = 'Disable relativenumber when entering insert mode',
+  group = vim.api.nvim_create_augroup('relativenumber-tofalse', { clear = true }),
   callback = function()
     opt.relativenumber = false
   end
 })
-vim.api.nvim_create_autocmd({"InsertLeave"}, {
+vim.api.nvim_create_autocmd('InsertLeave', {
+  group = vim.api.nvim_create_augroup('relativenumber-totrue', { clear = true }),
+  desc = 'Re-enable relativenumber when going back to normal mode',
   callback = function()
     opt.relativenumber = true
   end

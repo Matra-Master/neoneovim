@@ -7,10 +7,10 @@ tnoremap("<C-w>n", "<C-\\><C-n>", {desc = 'Exit Terminal'})
 
 nnoremap("<leader>e", ":Lexplore<CR>", {desc = "Open file [E]xplorer in neovim's actual "})
 nnoremap("<leader>E", ":Lexplore %:p:h<CR>", {desc = "Open file [e]xplorer in current's file folder"})
-nnoremap("<leader>a", ":wincmd h<CR>", {desc = 'Move to left window'})
-nnoremap("<leader>s", ":wincmd j<CR>", {desc = 'Move to window down'})
-nnoremap("<leader>w", ":wincmd k<CR>", {desc = 'Move to window up'})
-nnoremap("<leader>d", ":wincmd l<CR>", {desc = 'Move to right window'})
+--nnoremap("<leader>a", ":wincmd h<CR>", {desc = 'Move to left window'})
+--nnoremap("<leader>s", ":wincmd j<CR>", {desc = 'Move to window down'})
+--nnoremap("<leader>w", ":wincmd k<CR>", {desc = 'Move to window up'})
+--nnoremap("<leader>d", ":wincmd l<CR>", {desc = 'Move to right window'})
 nnoremap("<C-j>", ":cnext<CR>", {desc = 'Go to next error in the C error List'})
 nnoremap("<C-k>", ":cprevious<CR>", {desc = 'Go to previous error in the C error List'})
 
@@ -44,6 +44,13 @@ nnoremap ("<M-k>", ":m .--<CR>", {desc = ''})
 
 nnoremap ("<Leader>cl", ":s///gn<CR>", {desc = '[C]ount ocurrences of last searched pattern in [L]ine'})
 nnoremap ("<Leader>tw", ":%s/\\s\\+$//e", {desc = 'Remove [T]railing [W]hitespaces in file'})
+--
+--     Nvim Tmux Navigation
+--
+nnoremap("<leader>a", ":<C-U>TmuxNavigateLeft<CR>", {desc = 'Move to left window'})
+nnoremap("<leader>s", ":<C-U>TmuxNavigateDown<CR>", {desc = 'Move to window down'})
+nnoremap("<leader>w", ":<C-U>TmuxNavigateUp<CR>", {desc = 'Move to window up'})
+nnoremap("<leader>d", ":<C-U>TmuxNavigateRight<CR>", {desc = 'Move to right window'})
 
 --
 -- Yank remaps

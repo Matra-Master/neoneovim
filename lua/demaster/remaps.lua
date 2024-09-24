@@ -43,7 +43,8 @@ nnoremap ("<M-k>", ":m .--<CR>", {desc = ''})
 
 
 nnoremap ("<Leader>cl", ":s///gn<CR>", {desc = '[C]ount ocurrences of last searched pattern in [L]ine'})
-nnoremap ("<Leader>tw", ":%s/\\s\\+$//e", {desc = 'Remove [T]railing [W]hitespaces in file'})
+nnoremap ("<Leader>tw", ":%s/\\s\\+$//e<CR>", {desc = 'Remove [T]railing [W]hitespaces in file'})
+
 --
 --     Nvim Tmux Navigation
 --

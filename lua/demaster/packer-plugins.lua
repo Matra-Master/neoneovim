@@ -48,7 +48,7 @@ return require('packer').startup(function(use)
   --Leap is the rework of Lightspeed
   use 'ggandor/leap.nvim'
 
-  use 'Exafunction/codeium.vim'
+  --use 'Exafunction/codeium.vim'
 
   use {
     'VonHeikemen/lsp-zero.nvim',

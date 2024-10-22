@@ -19,6 +19,7 @@ lsp.on_attach(function(_, bufnr)
 end)
 --require('rust-tools').setup({server = rust_lsp})
 --require('lspconfig').phpactor.setup({})       --No tengo ganas ahora de config
+
 lsp.setup()
 
 require('mason').setup()
@@ -27,6 +28,7 @@ require('mason-lspconfig').setup({
     'tsserver',
     'eslint',
     'lua_ls',
+    'pyright', --python
     'rust_analyzer',
     'intelephense', --php
     --'phpactor', --php

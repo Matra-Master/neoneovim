@@ -5,8 +5,8 @@ local tnoremap = require("demaster.keymap").tnoremap
 
 tnoremap("<C-w>n", "<C-\\><C-n>", {desc = 'Exit Terminal'})
 
-nnoremap("<leader>e", ":Lexplore<CR>", {desc = "Open file [E]xplorer in neovim's actual "})
-nnoremap("<leader>E", ":Lexplore %:p:h<CR>", {desc = "Open file [e]xplorer in current's file folder"})
+--nnoremap("<leader>e", ":Lexplore<CR>", {desc = "Open file [E]xplorer in neovim's actual "})
+--nnoremap("<leader>E", ":Lexplore %:p:h<CR>", {desc = "Open file [e]xplorer in current's file folder"})
 --nnoremap("<leader>a", ":wincmd h<CR>", {desc = 'Move to left window'})
 --nnoremap("<leader>s", ":wincmd j<CR>", {desc = 'Move to window down'})
 --nnoremap("<leader>w", ":wincmd k<CR>", {desc = 'Move to window up'})

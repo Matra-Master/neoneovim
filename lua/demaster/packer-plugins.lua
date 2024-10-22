@@ -73,6 +73,9 @@ return require('packer').startup(function(use)
   }
   use 'stevearc/oil.nvim'
   use 'christoomey/vim-tmux-navigator'
+  use 'tpope/vim-dadbod'
+  use 'kristijanhusak/vim-dadbod-completion'
+  use 'kristijanhusak/vim-dadbod-ui'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
